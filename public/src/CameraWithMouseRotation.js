@@ -29,8 +29,8 @@ export const handleMouseMovement = (mouseX, mouseY, cameraOrientationState) => {
 
     const rotationScale = 0.05;
 
-    cameraOrientationState.pitchAngle = -(mouseY * rotationScale) * Math.PI;
-    cameraOrientationState.yawAngle = -(mouseX * rotationScale) * Math.PI;
+    cameraOrientationState.pitchAngle = -(mouseY * rotationScale) * Math.PI; //Remove negative if mouse rotation is inverted
+    cameraOrientationState.yawAngle = -(mouseX * rotationScale) * Math.PI; //Remove negative if mouse rotation is inverted
 
     cameraOrientationState.startingPitchAngleForCurrentCoordinates = cameraOrientationState.previousPitchAngle;
     cameraOrientationState.startingYawAngleForCurrentCoordinates = cameraOrientationState.previousYawAngle;
