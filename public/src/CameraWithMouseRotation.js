@@ -3,6 +3,7 @@ import * as THREE from 'three'
 //Creates a basic Three.js PerspectiveCamera that 
 export const PerspectiveCameraForResizableWindow = (cameraFOV, howNearToRender, howFarToRender, renderer) => {
     
+    //setup camera according to the arguments
     const camera = new THREE.PerspectiveCamera(cameraFOV, window.innerWidth / window.innerHeight, howNearToRender, howFarToRender); 
 
     //Set the pixel Ratio to be the same as the devices
